@@ -1,15 +1,19 @@
-# Name: Evan Butler
-# Date:
+# Name: Evan Butler & Kelly de Vries
+# Date: April 22, 2015.
 
-Description:
+Description: A site where nerds post links to articles, vote on which ones they like best, and discuss the articles with comments.
 
 # SetUp and Use
 
 SetUp
 
-1.
+1. Open terminal/console and type: 'git clone https://github.com/evanb2/hackerNewsANGUI'
 
-# Copyright (c) 2015 (Evan Butler)
+2. Start a local server in the hackerNewsANGUI root directory.
+
+3. Open web browser and navigate to localhost:8000.
+
+# Copyright (c) 2015 (Evan Butler & Kelly de Vries)
 
 # The MIT License (MIT)
 
