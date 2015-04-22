@@ -6,4 +6,10 @@ hackerNews.config(function($stateProvider) {
     templateUrl: "partials/home.html",
     controller: 'ThreadsCtrl'
   });
+
+  $stateProvider.state('threads.comments', {
+    url: "/:threadId",
+    templateUrl: "partials/threads.comments.html",
+    controller: "CommentsCtrl"
+  });
 });
