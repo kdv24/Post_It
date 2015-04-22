@@ -1,3 +1,21 @@
-<h1>Welcome to the Course Roster Application</h1>
+<div ng-show="threads.length">
+  <h1>All Threads:</h1>
+  <ul>
+    <li ng-repeat="item in threads">
+      <a ui-sref="threads.comments({ threadId: item.id })">{{ item.name }}</a>
+    </li>
+  </ul>
+</div>
 
-<h3><a ui-sref="courses">Click here to view all courses</a></h3>
+<div class="col-md-4">
+  <h3>Add a new Thread</h3>
+  <form ng-submit="ThreadsFactory.addThread()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="ThreadsFactory.threadName" class="form-control" placeholder="Thread Name" required autofocus>
+      <input type="text" ng-model="ThreadsFactory.threadUrl" class="form-control" placeholder="www.example.com" required>
+    </div>
+    <button type="submit" class="btn btn-warning">Post</button>
+  </form>
+</div>
+
+<div ui-view> </div>
