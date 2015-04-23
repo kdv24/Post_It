@@ -5,7 +5,5 @@ hackerNews.controller('CommentsCtrl', function CommentsCtrl ($scope, $stateParam
     $scope.commentText = null;
   }
 
-  // $scope.plusVote = function() {
-  //   $scope.thread.votes += 1;
-  // }
+
 });

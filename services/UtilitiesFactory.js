@@ -9,12 +9,5 @@ hackerNews.factory('UtilitiesFactory', function UtilitiesFactory() {
     return null;
   };
 
-  // factory.plusVote = function() {
-  //   debugger;
-  //   $scope.thread = UtilitiesFactory.findById(ThreadsFactory.threads, $stateParams.threadId);
-  //   currentThread.votes += 1;
-  //   console.log("Votes" + currentThread.votes);
-  // };
-
   return factory;
 });
