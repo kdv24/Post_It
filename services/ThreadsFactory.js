@@ -9,7 +9,11 @@ hackerNews.factory('ThreadsFactory', function ThreadsFactory() {
 
   factory.plusVote = function(item) {
     item.votes += 1;
-  }
-  
+  };
+
+  factory.minusVote = function(item) {
+    item.votes -= 1;
+  };
+
   return factory;
 });

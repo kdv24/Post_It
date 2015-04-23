@@ -21,10 +21,14 @@
 <div ng-show="threads.length">
   <h1>All Threads:</h1>
   <ul>
-    <li ng-repeat="item in threads">
+    <li ng-repeat="item in threads | orderBy:'-votes'">
       <button ng-click="ThreadsFactory.plusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
-        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">{{ item.votes }}</span>
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
       </button>
+      <button ng-click="ThreadsFactory.minusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+      </button>
+      <h5>Rank: {{ item.votes }}</h5>
       <a href="{{item.url}}">{{ item.name }}</a>
       <button ui-sref="threads.comments({ threadId: item.id })">Comment</button>
     </li>
