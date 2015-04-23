@@ -7,10 +7,13 @@
 
   <div class="row">
     <form ng-submit="ThreadsFactory.addThread()" role="form">
-      <div class="form-group col-lg-6">
+      <div class="form-group col-lg-4">
         <input type="text" ng-model="ThreadsFactory.threadName" class="form-control" placeholder="Thread Name" required autofocus>
       </div>
-      <div class="form-group col-lg-6">
+      <!-- <div class="form-group col-lg-4">
+        <input type="text" ng-model="ThreadsFactory.date" class="form-control" placeholder="" required>
+      </div> -->
+      <div class="form-group col-lg-4">
         <input type="text" ng-model="ThreadsFactory.threadUrl" class="form-control" placeholder="https://www.example.com" required>
         <button id="post" type="submit" class="btn btn-warning btn-xs">Post</button>
       </div>
@@ -22,15 +25,20 @@
   <h1>All Threads:</h1>
   <ul>
     <li ng-repeat="item in threads | orderBy:'-votes'">
-      <button ng-click="ThreadsFactory.plusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
-        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-      </button>
-      <button ng-click="ThreadsFactory.minusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
-        <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
-      </button>
-      <h5>Rank: {{ item.votes }}</h5>
-      <a href="{{item.url}}">{{ item.name }}</a>
-      <button ui-sref="threads.comments({ threadId: item.id })">Comment</button>
+      <div class="row threads">
+        <button ng-click="ThreadsFactory.plusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+          <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+        </button>
+
+        <button ng-click="ThreadsFactory.minusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+          <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+        </button>
+
+        <h5>Rank: {{ item.votes }}</h5>
+        <a href="{{item.url}}">{{ item.name }}</a>
+        <button ui-sref="threads.comments({ threadId: item.id })">Comment</button>
+        <p>{{ item.date | date:'HH:mm MM-dd-yyyy' }}</p>
+      </div>
     </li>
   </ul>
 </div>
