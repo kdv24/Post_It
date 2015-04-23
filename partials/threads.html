@@ -22,11 +22,11 @@
   <h1>All Threads:</h1>
   <ul>
     <li ng-repeat="item in threads">
+      <button ng-click="ThreadsFactory.plusVote(item)" type="button" class="btn btn-default btn-xs" aria-label="Left Align">
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">{{ item.votes }}</span>
+      </button>
       <a href="{{item.url}}">{{ item.name }}</a>
       <button ui-sref="threads.comments({ threadId: item.id })">Comment</button>
-      <button type="button" class="btn btn-default btn-xs" aria-label="Left Align">
-        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-      </button>
     </li>
   </ul>
 </div>
