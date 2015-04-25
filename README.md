@@ -1,11 +1,10 @@
 # Name: Evan Butler & Kelly de Vries
 # Date: April 22, 2015.
 
-Description: A site where nerds post links to articles, vote on which ones they like best, and discuss the articles with comments.
+Description: A site where people post articles, vote on which ones they like best, and comment on the threads.
 
 # SetUp and Use
 
-SetUp
 
 1. Open terminal/console and type: 'git clone https://github.com/evanb2/hackerNewsANGUI'
 
@@ -14,6 +13,12 @@ SetUp
 3. Open web browser and navigate to localhost:8000.
 
 # Copyright (c) 2015 (Evan Butler & Kelly de Vries)
+
+# Known bugs/future modifications
+
+1. The user needs to be on the home page to comment on a link
+2. The comments don't yet display below each thread
+
 
 # The MIT License (MIT)
 
