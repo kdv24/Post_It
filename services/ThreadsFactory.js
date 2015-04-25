@@ -25,7 +25,7 @@ hackerNews.factory('ThreadsFactory', function ThreadsFactory() {
   factory.checkThread = function(item) {
     var currentDate = new Date();
     var elapsedTime = currentDate - item.date;
-    return elapsedTime < 10000;
+    return elapsedTime < 100000;
   };
 
 
