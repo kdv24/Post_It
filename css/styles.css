@@ -26,3 +26,11 @@ ul  {
 a:hover {
     text-decoration: none;
 }
+
+body {
+  background-color: #2672B0;
+}
+
+.white {
+  color: white;
+}

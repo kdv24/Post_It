@@ -32,7 +32,7 @@
         </button>
 
         <h5>Rank: {{ item.votes }}</h5>
-        <a href="{{item.url}}">{{ item.name }}</a>
+        <a class="white" href="{{item.url}}">{{ item.name }}</a>
         <button ui-sref="threads.comments({ threadId: item.id })">Comment</button>
         <p>{{ item.date | date:'HH:mm MM-dd-yyyy' }}</p>
       </div>
